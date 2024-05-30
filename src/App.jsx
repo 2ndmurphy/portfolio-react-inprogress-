@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <main className='w-full h-full flex flex-col justify-center items-center md:py-10 bg-[#F5F0F6]'>
+    <main className='w-full h-full flex flex-col justify-center items-center md:py-10 bg-[#F5F0F6] overflow-x-hidden'>
       <header className='flex justify-evenly py-6 px-3 items-center w-full md:max-w-md md:py-3 md:px-3 md:rounded-3xl' style={{ backgroundColor: '#2B4162', color: '#F5F0F6' }}>
         <a href="/" style={{ color: '#F5F0F6' }}>Home</a>
         <a href="#about" style={{ color: '#F5F0F6' }}>About</a>
