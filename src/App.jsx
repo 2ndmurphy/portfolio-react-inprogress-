@@ -8,14 +8,8 @@ function About() {
         justify-start md:flex-nowrap px-2 py-3
         rounded-lg shadow-md">
         <h1 className="text-xl md:text-2xl text-start">ABOUT ME</h1>
-        <div className="w-auto overflow-hidden bg-slate-400 rounded-md p-2">
-          <p className="text-start text-white">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Ut laboriosam velit repellendus eaque sint eligendi aspernatur, 
-            iure deleniti reiciendis ea optio voluptas natus unde voluptatem 
-            earum eveniet distinctio accusantium quod.
-          </p>
-          <p className="text-start text-white">
+        <div className="w-auto overflow-hidden bg-orange-100 rounded-md p-2">
+          <p className="text-start text-base-500">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Ut laboriosam velit repellendus eaque sint eligendi aspernatur, 
             iure deleniti reiciendis ea optio voluptas natus unde voluptatem 
