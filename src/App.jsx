@@ -8,14 +8,18 @@ function About() {
         justify-start md:flex-nowrap px-2 py-3
         rounded-lg shadow-md">
         <h1 className="text-xl md:text-2xl text-start">ABOUT ME</h1>
-        <div className="w-auto overflow-hidden bg-orange-100 rounded-md p-2">
-          <p className="text-start text-base-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Ut laboriosam velit repellendus eaque sint eligendi aspernatur, 
-            iure deleniti reiciendis ea optio voluptas natus unde voluptatem 
-            earum eveniet distinctio accusantium quod.
-          </p>
-          <div>found me in</div>
+        <div className="w-auto flex flex-wrap md:flex-nowrap overflow-hidden bg-orange-100 rounded-md p-2">
+          <div className='w-full md:w-1/2 bg-slate-500'>
+            <p className="text-start text-base-500">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+              Ut laboriosam velit repellendus eaque sint eligendi aspernatur.
+            </p>
+          </div>
+          <div className='bg-black'>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={350} height={350}>
+              <path fill="#FF0066" d="M46,-31.1C58.4,-21.1,66.6,-2,62.8,14.3C59,30.6,43.4,44.1,24.8,54.1C6.2,64,-15.4,70.4,-24.2,61.8C-33.1,53.1,-29.1,29.4,-31.6,9.7C-34.1,-10,-43,-25.7,-38.8,-33.8C-34.6,-42,-17.3,-42.7,-0.3,-42.5C16.8,-42.3,33.5,-41.2,46,-31.1Z" transform="translate(100 100)" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -157,7 +161,7 @@ function App() {
         
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-            <div className="menu p-4 w-80 min-h-full text-base-content bg-orange-100">
+            <div className="menu p-4 w-80 min-h-full text-base-content bg-transparent">
               {/* Sidebar content here */}
               <div className='w-full h-64 p-3 bg-white rounded-box'>
                 <div className='flex justify-start items-center gap-3 py-3 border-b-2'>
