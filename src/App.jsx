@@ -15,24 +15,24 @@ const App = () => {
       z-50 p-6'>
         <button className='text-white bg-slate-600 
         bg-opacity-20 text-2xl p-4 rounded-3xl focus:ring-2 
-        focus:ring-slate-800'><FaCode /></button>
+        focus:ring-slate-200'><FaCode /></button>
       </nav>
       
       <div className='w-full h-full'>
         <div className='w-full h-full flex justify-center items-center bg-hero-pattern bg-cover bg-center bg-fixed'>
-          <div className='w-full flex justify-center items-center lg:max-w-2xl h-screen'>
+          <div className='w-full flex justify-center items-center h-screen'>
             <h1 className='text-white text-2xl font-mono'>Welcome Strangers!</h1>
           </div>
         </div>
         <div className='w-full h-full flex justify-center items-center bg-second-pattern bg-cover bg-center bg-fixed'>
-          <div className='w-full flex justify-center items-center lg:max-w-2xl h-screen'>
+          <div className='w-full flex justify-center items-center h-screen'>
             <ScrollAnimation animateIn='fadeInUp'>
               <h1 className='text-white text-2xl font-mono'>Get To Know Me!</h1>
             </ScrollAnimation>
           </div>
         </div>
         <div className='w-full h-full flex justify-center items-center bg-third-pattern bg-cover bg-center bg-fixed'>
-          <div className='w-full flex justify-center items-center lg:max-w-2xl h-screen'>
+          <div className='w-full flex justify-center items-center h-screen'>
             <ScrollAnimation animateIn="fadeInUp">
               <h1 className='text-white text-2xl font-mono'>Build Up Colaboration</h1>
             </ScrollAnimation>
