@@ -1,87 +1,50 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Link, Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.compat.css";
+import { FaCode, FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const App = () => {
-  React.useEffect(() => {
-    Events.scrollEvent.register('begin', function () {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register('end', function () {
-      console.log("end", arguments);
-    });
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
-
   return (
     <Router>
-      <main className='relative w-full h-screen'>
-        <nav className='hidden fixed top-0 left-0 
-        md:flex md:flex-col w-16 h-full bg-black
-        bg-opacity-10 z-50 backdrop-blur-sm'>
-          <div className='p-5 rotate-90 flex gap-x-10'>
-            <Link 
-              to="home" 
-              spy={true} 
-              smooth={true} 
-              duration={500} 
-              delay={0}
-              className="text-white text-xl cursor-pointer"
-              activeClass="active">
-              Home
-            </Link>
-            <Link 
-              to="about" 
-              spy={true} 
-              smooth={true} 
-              duration={500}
-              delay={0}
-              className="text-white text-xl cursor-pointer"
-              activeClass="active">
-              About
-            </Link>
-            <Link 
-              to="contact" 
-              spy={true} 
-              smooth={true} 
-              duration={500}
-              delay={0}
-              className="text-white text-xl cursor-pointer"
-              activeClass="active">
-              Contact
-            </Link>
+      <main className='relative flex w-full min-h-screen bg-sky-400'>
+        <div className='hidden fixed top-0 left-0 z-50 w-20 min-h-screen bg-red-600 lg:flex flex-col justify-between items-center px-4 py-6'>
+          <div>
+            <h1 className='text-white text-4xl font-bold hover:rotate-90'><FaCode /></h1>
           </div>
-        </nav>
+          <div className='flex flex-col gap-5 text-white text-2xl'>
+            <h1 className='hover:scale-150 transition-all duration-300 ease-in-out'><FaTwitter /></h1>
+            <h1 className='hover:scale-150 transition-all duration-300 ease-in-out'><FaFacebook /></h1>
+            <h1 className='hover:scale-150 transition-all duration-300 ease-in-out'><FaInstagram /></h1>
+            <h1 className='hover:scale-150 transition-all duration-300 ease-in-out'><FaYoutube /></h1>
+          </div>
+        </div>
         
-        <div className='w-full h-full'>
-          <Element name="home" className='w-full h-full flex justify-center items-center bg-hero-pattern bg-cover bg-center bg-fixed'>
-            <div className='w-full flex justify-center items-center h-screen'>
-              <h1 className='text-white text-2xl font-mono'>Welcome Strangers!</h1>
-            </div>
-          </Element>
+        <div className='relative w-full lg:ml-20 min-h-screen bg-white'>
+          <div className='sticky top-0 z-40 w-full h-16 p-4 bg-white flex justify-between items-center shadow-md'>
+            <nav className='flex-1'>
+              <ul className='flex text-slate-700 gap-6'>
+                <li>Home</li>
+                <li>About</li>
+                <li>Project</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+            <div className='font-bold'>LOGO</div>
+          </div>
           
-          <Element name="about" className='w-full h-full flex justify-center items-center bg-second-pattern bg-cover bg-center bg-fixed'>
-            <div className='w-full flex justify-center items-center h-screen'>
-              <ScrollAnimation animateIn='fadeInUp'>
-                <h1 className='text-white text-2xl font-mono'>Get To Know Me!</h1>
-              </ScrollAnimation>
-            </div>
-          </Element>
-          
-          <Element name="contact" className='w-full h-full flex justify-center items-center bg-third-pattern bg-cover bg-center bg-fixed'>
-            <div className='w-full flex justify-center items-center h-screen'>
-              <ScrollAnimation animateIn="fadeInUp">
-                <h1 className='text-white text-2xl font-mono'>Build Up Collaboration</h1>
-              </ScrollAnimation>
-            </div>
-          </Element>
+          <div className=''>
+            <section className='bg-pink-500 min-h-screen grid grid-cols-1 md:grid-cols-2'>
+              <div className='w-full h-full px-4 md:px-8 py-4 bg-red-300'>
+                HELLO
+              </div>
+              <div className='w-full h-full px-4 md:px-8 py-4 bg-red-300'>
+                HELLO
+              </div>
+            </section>
+            
+            <section className='bg-teal-500 w-full min-h-screen grid grid-cols-1 md:grid-cols-2'>
+              INI PAGE 2
+            </section>
+          </div>
         </div>
       </main>
     </Router>
